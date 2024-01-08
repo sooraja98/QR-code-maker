@@ -1,15 +1,7 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "server.js",
-            "use": "@now/node"
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "server.js"
-        }
-    ]
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "node@18.17.1"  // Specify a valid Node.js version
+    }
+  }
 }
